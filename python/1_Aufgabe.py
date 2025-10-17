@@ -5,24 +5,6 @@ class Auto:
         self.set_baujahr(baujahr)
         self.set_kilometerstand(kilometerstand)
 
-    def get_marke(self):
-        return self._marke
-
-    def get_modell(self):
-        return self._modell
-
-    def get_baujahr(self):
-        return self._baujahr
-
-    def get_kilometerstand(self):
-        return self._kilometerstand
-
-    def set_marke(self, marke):
-        self._marke = marke
-
-    def set_modell(self, modell):
-        self._modell = modell
-
     def set_baujahr(self, baujahr):
         if isinstance(baujahr, int) and 1886 <= baujahr <= 2025:
             self._baujahr = baujahr
@@ -35,10 +17,11 @@ class Auto:
         else:
             raise ValueError("Kilometerstand muss eine nicht-negative Zahl sein.")
 
-    # String-Darstellung
     def __str__(self):
         return f"{self._marke} {self._modell} ({self._baujahr}) - {self._kilometerstand} km"
     
+
+
 auto1 = Auto()
 print(auto1)
 
